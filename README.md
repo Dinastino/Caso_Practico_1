@@ -10,8 +10,7 @@ El modelo OSI consta de siete capas que definen el proceso de comunicación de d
 
 1. **Capa Física**: Maneja la transmisión sobre el medio físico. Esta capa se ocupa de los aspectos físicos de la red, como los cables, conectores y la sincronización de bits.
 2. **Capa de Enlace de Datos**: Asegura una comunicación confiable entre nodos adyacentes. Controla los errores de transmisión, la dirección física (MAC) y organiza los datos en tramas.
-
-   Ejemplos: Switches, adaptadores de red, Ethernet.
+   *Ejemplos*: Switches, adaptadores de red, Ethernet.
 4. **Capa de Red**: Determina rutas y direcciones IP. 
 5. **Capa de Transporte**: Gestiona la entrega confiable de datos (TCP/UDP).
 6. **Capa de Sesión**: Administra la comunicación entre aplicaciones.
