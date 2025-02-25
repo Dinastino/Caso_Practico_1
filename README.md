@@ -1,4 +1,32 @@
 # Caso_Practico_1
+
+# Diseño de la Arquitectura de Comunicación
+
+## Paso 1: Análisis y Diseño de la Arquitectura de Comunicación
+
+### Revisión de Modelos OSI y TCP/IP
+
+El modelo OSI consta de siete capas que definen el proceso de comunicación de datos:
+
+1. **Capa Física**: Maneja la transmisión de bits sobre el medio físico.
+2. **Capa de Enlace de Datos**: Asegura una comunicación confiable entre nodos adyacentes.
+3. **Capa de Red**: Determina rutas y direcciones IP.
+4. **Capa de Transporte**: Gestiona la entrega confiable de datos (TCP/UDP).
+5. **Capa de Sesión**: Administra la comunicación entre aplicaciones.
+6. **Capa de Presentación**: Convierte y cifra datos.
+7. **Capa de Aplicación**: Interactúa con el usuario final (HTTP, FTP, SMTP).
+
+El modelo TCP/IP se basa en cuatro capas:
+
+1. **Capa de Acceso a la Red**: Equivale a las capas física y de enlace de datos del modelo OSI.
+2. **Capa de Internet**: Equivale a la capa de red del modelo OSI y maneja direccionamiento IP.
+3. **Capa de Transporte**: Similar a la del modelo OSI, emplea TCP o UDP.
+4. **Capa de Aplicación**: Combina las capas de aplicación, presentación y sesión del modelo OSI.
+
+Estos modelos se integran en la solución asegurando una comunicación estructurada y eficiente entre dispositivos.
+
+### Comparación entre el Modelo OSI y el Modelo TCP/IP
+
 | **Capa**               | **Modelo OSI**                     | **Modelo TCP/IP**                  |
 |------------------------|------------------------------------|------------------------------------|
 | **Capa 1**              | Capa Física                        | Capa de Acceso a la Red           |
@@ -9,7 +37,3 @@
 | **Capa 6**              | Capa de Presentación               | Capa de Aplicación (combinada)    |
 | **Capa 7**              | Capa de Aplicación                 | Capa de Aplicación (combinada)    |
 
-### Descripción breve
-- **El modelo OSI** tiene 7 capas bien definidas y se usa como referencia teórica.
-- **El modelo TCP/IP** es más práctico y se basa en 4 capas que agrupan funciones del modelo OSI.
-- Ambos modelos permiten la comunicación entre dispositivos en redes, pero TCP/IP es el utilizado en Internet.
