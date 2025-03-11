@@ -4,11 +4,11 @@
 
 ## Paso 1: Análisis y Diseño de la Arquitectura de Comunicación
 
-### Revisión de Modelos OSI y TCP/IP
+### Explicación de Modelos OSI y TCP/IP
 
 El modelo OSI consta de siete capas que definen el proceso de comunicación de datos:
 
-1. **Capa Física**: Maneja la transmisión sobre el medio físico. Esta capa se ocupa de los aspectos físicos de la red, como los cables, conectores y la sincronización de bits. *Ejemplos*: Cables de red, concentradores, tarjetas de red.
+1. **Capa Física**: Es la encargada de la transmisión de bits a traves de medios fisicos como cables de trenzado o fibra optica. También define estandares de conectores, interfaces mecanicas, electricas y opticas como tensiones logicas, tipempos de hold y set-up o metodos de transmisión. *Ejemplos*: Cables de red, conectores, tarjetas de red.
 
    
 3. **Capa de Enlace de Datos**: Asegura una comunicación confiable entre nodos adyacentes. Controla los errores de transmisión, la dirección física (MAC) y organiza los datos en tramas. *Ejemplos*: Switches, adaptadores de red, Ethernet.
