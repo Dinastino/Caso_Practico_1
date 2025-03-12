@@ -12,22 +12,22 @@ El modelo OSI consta de siete capas que definen el proceso de comunicación de d
 1. **Capa Física**: Es la encargada de la transmisión de bits a traves de medios fisicos como cables de trenzado o fibra optica. También define estandares de conectores, interfaces mecanicas, electricas y opticas como tensiones logicas, tipempos de hold y set-up o metodos de transmisión. *Ejemplos*: Cables de red, conectores, tarjetas de red.
 
    
-3. **Capa de Enlace de Datos**: Es la capa encargada de convertir el medio de transmisión puro en una línea de comunicación sin errores, detectandolos y corrigendolos asegurandose de una transmision confiable, y organizar los datos en tramas. Se divide en la subcapa de control de acceso al medio compartido y la subcapa de control del flujo. *Ejemplos*: Switches, adaptadores de red, Ethernet.
+2. **Capa de Enlace de Datos**: Es la capa encargada de convertir el medio de transmisión puro en una línea de comunicación sin errores, detectandolos y corrigendolos asegurandose de una transmision confiable, y organizar los datos en tramas. Se divide en la subcapa de control de acceso al medio compartido y la subcapa de control del flujo. *Ejemplos*: Switches, adaptadores de red, Ethernet.
 
    
-5. **Capa de Red**: Se encarga del rutado desde origen a destino permition la comunicaion entre distintas redes. Se divide en rutado estatico, tablas fijas ya codificadas, o rutado dinamico, ajustes a tiempo real. Tambien gestiona la congestion de las redes, asegura la calidad del servicio y resuelve la interconexión entre diferentes redes. *Ejemplos*: Routers, direcciones IP.
+3. **Capa de Red**: Se encarga del rutado desde origen a destino permition la comunicaion entre distintas redes. Se divide en rutado estatico, tablas fijas ya codificadas, o rutado dinamico, ajustes a tiempo real. Tambien gestiona la congestion de las redes, asegura la calidad del servicio y resuelve la interconexión entre diferentes redes. *Ejemplos*: Routers, direcciones IP.
 
    
-7. **Capa de Transporte**: Abstrae a las capas superiores de los cambios tecnológicos en las capas inferiores, dividiendo los datos para adaptarlos a la red. Garantiza una comunicación punto a punto libre de errores, asegurando que los mensajes lleguen completos y en orden, aunque en algunos casos pueden ser mensajes aislados sin garantía de secuencia. Los datos se manejan como segmentos o datagramas, dependiendo del protocolo utilizado. Opera desde el nodo inicial hasta el nodo final. *Ejemplos*: protocolos TCP, UDP.
+4. **Capa de Transporte**: Abstrae a las capas superiores de los cambios tecnológicos en las capas inferiores, dividiendo los datos para adaptarlos a la red. Garantiza una comunicación punto a punto libre de errores, asegurando que los mensajes lleguen completos y en orden, aunque en algunos casos pueden ser mensajes aislados sin garantía de secuencia. Los datos se manejan como segmentos o datagramas, dependiendo del protocolo utilizado. Opera desde el nodo inicial hasta el nodo final. *Ejemplos*: protocolos TCP, UDP.
 
    
-9. **Capa de Sesión**: Establece, mantiene y termina las sesiones de comunicación entre aplicaciones.
+5. **Capa de Sesión**: Permite que diferentes maquinas establezcan y mantengan sesiones de comunicaión. Utiliza multiples servicios la aadministracion de token, control de secciones criticas, y la sincronización, manejando las interrupciones.
 
     
-11. **Capa de Presentación**: Convierte y cifra datos.
+6. **Capa de Presentación**: Se ocupa de la sintaxis y semántica de la informacion transmitida permitienddo la comunicación entre nodos con diferentes formatos de datos.Se basa en estructuras de datros abstractas para estanddarizar la interpretación de la información.
 
     
-13. **Capa de Aplicación**: Interactúa con el usuario final (HTTP, FTP, SMTP).
+7. **Capa de Aplicación**: Capa que iteractua con el usuario final y proporcoina servicios como trasferencia de archivos, correo electronico y navegación web. Contiene los protocolos mas utilizados como HTTP, FTP o SMPT entre otros.
 
 El modelo TCP/IP se basa en cuatro capas:
 
@@ -50,3 +50,6 @@ Estos modelos se integran en la solución asegurando una comunicación estructur
 | **Capa 6**              | Capa de Presentación               | Capa de Aplicación (combinada)    |
 | **Capa 7**              | Capa de Aplicación                 | Capa de Aplicación (combinada)    |
 
+
+
+### Diseño Lógico de la Red:
