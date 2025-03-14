@@ -74,7 +74,7 @@ Se utilizarán múltiples dispositivos para la implementación de la infraestruc
 
 La red se segmentará en varias VLANs, siguiendo un esquema de distribución por plantas. El diseño será el siguiente:
 
-1.La recepción y la planta 1 estarán asignadas a la VLAN 100. 
+1.La recepción y la planta 1 estarán asignadas a la VLAN 100.  
 2.Las plantas 2 y 3 corresponderán a la VLAN 200.  
 3.Las plantas 4 y 5 estarán en la VLAN 300.  
 4.Las plantas 6 y 7 serán asignadas a la VLAN 400.  
