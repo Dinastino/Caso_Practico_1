@@ -83,3 +83,6 @@ La red se segmentará en varias VLANs, siguiendo un esquema de distribución por
 
 
 Para optimizar la administración de las VLANs, se implementará el protocolo VTP (VLAN Trunking Protocol), permitiendo una gestión centralizada y eficiente de las VLANs a lo largo de toda la red. Mediante VTP, los cambios en la configuración de VLAN se propagarán automáticamente a los switches, reduciendo la carga administrativa y evitando inconsistencias en la segmentación.
+
+
+## Paso 2: Capa Fisica:
