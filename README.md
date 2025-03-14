@@ -100,7 +100,8 @@ Donde: C=B*log2(1+SNR)
 
 Ancho de banda (B)
 
-SNR:
+SNR: relación señal a ruido determinada  La relación señal a ruido se mide en dB en un ancho de banda es:
+𝑆𝑁𝑅 = 10 𝑙𝑜𝑔10(𝑆𝑁𝑅) = 10𝑆𝑁𝑅/10 [dB]
 
 Trenzado:  
 
