@@ -146,16 +146,7 @@ La modulación es un factor clave para la eficiencia de la transmisión, ya que 
 Enlaces cableados (Fibra óptica y Ethernet): Se emplea 16-QAM (16-Quadrature Amplitude Modulation). Este esquema de modulación proporciona un buen balance entre eficiencia espectral y resistencia al ruido, permitiendo transmitir 4 bits por símbolo. Se elige 16-QAM en lugar de modulación de orden superior (como 64-QAM o 256-QAM) debido a que los enlaces cableados tienen menor susceptibilidad al ruido y permiten una mayor fiabilidad sin necesidad de corrección de errores excesiva.
 
 ## Capa de Red
-Para dentro de las VLAN Tipo de servicio no orientado a la conexion, sin confirmacion de conexión:  
-   No detecta pérdidas ni errores  
-   Correcto para sistemas en tiempo real y LANs con canales estables  
 
-
-Para comunicaion entre sedes Tipo de servicio Orientado a la conexion, con confirmacion de conexion:  
-• Establece conexiones e inicializa una serie de variables  
-• Transmite las tramas  
-• Cierra la conexión, libera las variables, búferes y el resto de recursos  
-• Correcto para WANs  
 
 ## Capa de trasporte
 ## Capa de aplicaion Multimedia
