@@ -1,2 +1,4 @@
 contraseña: redA / protocolo VTP
 PAssword: hsddTTS#1
+
+Sede centralizada a sade secundaria con funcionamiento un router/2 sedes(Desarrollo con VPN site to site).
