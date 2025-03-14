@@ -102,6 +102,15 @@ Ancho de banda (B)
 
 SNR:
 
+Trenzado:  
+
+Coaxial:  
+
+Fibra:  
+
+
+**Perdidas**
+Calculo de perdidas de madrid a malaga(Temporal)
 Cálculo de Pérdida de Señal en Fibra Óptica
 Usaremos la fórmula:
 
@@ -134,3 +143,8 @@ Selección de Modulación
 La modulación es un factor clave para la eficiencia de la transmisión, ya que afecta la tasa de bits y la robustez ante interferencias. Se han seleccionado elsiguientes esquemas:
 
 Enlaces cableados (Fibra óptica y Ethernet): Se emplea 16-QAM (16-Quadrature Amplitude Modulation). Este esquema de modulación proporciona un buen balance entre eficiencia espectral y resistencia al ruido, permitiendo transmitir 4 bits por símbolo. Se elige 16-QAM en lugar de modulación de orden superior (como 64-QAM o 256-QAM) debido a que los enlaces cableados tienen menor susceptibilidad al ruido y permiten una mayor fiabilidad sin necesidad de corrección de errores excesiva.
+
+## Capa de Red
+## Capa de trasporte
+## Capa de aplicaion Multimedia
+## Seguridad
