@@ -56,6 +56,8 @@ Estos modelos se integran en la solución asegurando una comunicación estructur
 
 Diagrama en el drawio
 
+Dos sedes una en madrid y otra en malaga
+
 #### Dispositivos:
 
 Se utilizarán múltiples dispositivos para la implementación de la infraestructura de red. El diseño se basa en una segmentación eficiente de la red y un enfoque robusto en seguridad para garantizar la correcta operación de los sistemas y proteger la información sensible.
@@ -86,3 +88,46 @@ Para optimizar la administración de las VLANs, se implementará el protocolo VT
 
 
 ## Paso 2: Capa Fisica:
+
+
+### Cálculo de la Tasa de Transmisión 
+Se utiliza la fórmula de Shannon:
+
+Donde: C=B*log2(1+SNR)
+
+Ancho de banda (B)
+
+SNR:
+
+Cálculo de Pérdida de Señal en Fibra Óptica
+Usaremos la fórmula:
+
+Perdida Total (dB)=Perdida por km×Distancia (km)+Perdida por Conectores+Perdida por Empalmes  
+Parámetros típicos:  
+
+
+Fibra Monomodo (SMF-28, 1550 nm):
+Atenuación promedio: 0.2 dB/km  
+Conectores (FC, SC, LC, etc.):
+Cada conector: 0.2 dB  
+Empalmes de fusión:
+Cada empalme: 0.1 dB  
+Se suele hacer 1 empalme cada 30 km → aprox. 18 empalmes en 530 km
+Cálculo Pérdida por fibra:  
+0.2dB/km×530km=106dB
+0.2 dB/km×530 km=106 dB  
+Pérdida por empalmes:
+
+18×0.1=1.8dB  
+Pérdida por conectores (suponiendo 2 extremos):
+2×0.2=0.4dB  
+
+Pérdida Total Estimada:
+106+1.8+0.4=108.2dB
+
+
+Selección de Modulación
+
+La modulación es un factor clave para la eficiencia de la transmisión, ya que afecta la tasa de bits y la robustez ante interferencias. Se han seleccionado elsiguientes esquemas:
+
+Enlaces cableados (Fibra óptica y Ethernet): Se emplea 16-QAM (16-Quadrature Amplitude Modulation). Este esquema de modulación proporciona un buen balance entre eficiencia espectral y resistencia al ruido, permitiendo transmitir 4 bits por símbolo. Se elige 16-QAM en lugar de modulación de orden superior (como 64-QAM o 256-QAM) debido a que los enlaces cableados tienen menor susceptibilidad al ruido y permiten una mayor fiabilidad sin necesidad de corrección de errores excesiva.
