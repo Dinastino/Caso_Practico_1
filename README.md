@@ -66,33 +66,33 @@ Diagrama en el drawio
 Se utilizarán múltiples dispositivos para la implementación de la infraestructura de red. El diseño se basa en una segmentación eficiente de la red y un enfoque robusto en seguridad para garantizar la correcta operación de los sistemas y proteger la información sensible.
 
 ***Enrutamiento***: Para el enrutamiento, se implementará un router central que gestionará el tráfico entre las distintas redes. Adicionalmente, se instalará un switch en cada par de plantas, comenzando con la recepción y la planta 1, y se continuará de la misma forma para las demás plantas del edificio.
+1. Router principal: Cisco ISR4331.
+2. Switches de acceso: Cisco 2960-24TT (8 unidades).
+3. Switch de multylayer: Cisco 3650-24PS.
 
 ***Seguridad***: La seguridad de la red se garantizará mediante la instalación de dos firewalls. Ambos firewalls aislaran las redes internas y externas con una zona desmilitarizada en medio para mayor seguridad.
+1. Firewall: Cisco ASA 5505 (2 unidades).
 
 ***Servidores***: Los servidores web se ubicarán dentro de la DMZ, permitiendo acceso controlado desde el exterior, mientras que los servidores internos estarán situados en la red interna, asegurando un entorno aislado y más seguro para los datos sensibles.
+1. Servidor: Server PT (7 unidades).
 
 ***Dispositivos***: Los ordenadores dentro de cada VLAN junto con los dispositivos de videoconferencia como los MCU, camaras y microfonos.
 
-
 #### Segmentación de la Red:  
-
-
 La red se segmentará en varias VLANs, siguiendo un esquema de distribución por plantas. El diseño será el siguiente:
 
-1.La recepción y la planta 1 estarán asignadas a la VLAN 100.  
-2.Las plantas 2 y 3 corresponderán a la VLAN 200.  
-3.Las plantas 4 y 5 estarán en la VLAN 300.  
-4.Las plantas 6 y 7 serán asignadas a la VLAN 400.  
-5.Las plantas 8 y 9 estarán en la VLAN 500.  
-6.Finalmente, las plantas 10 y 11 corresponderán a la VLAN 600.  
+1. La recepción y la planta 1 estarán asignadas a la VLAN 100.  
+2. Las plantas 2 y 3 corresponderán a la VLAN 200.  
+3. Las plantas 4 y 5 estarán en la VLAN 300.  
+4. Las plantas 6 y 7 serán asignadas a la VLAN 400.  
+5. Las plantas 8 y 9 estarán en la VLAN 500.  
+6. Finalmente, las plantas 10 y 11 corresponderán a la VLAN 600.  
 
 
 Para optimizar la administración de las VLANs, se implementará el protocolo VTP (VLAN Trunking Protocol), permitiendo una gestión centralizada y eficiente de las VLANs a lo largo de toda la red. Mediante VTP, los cambios en la configuración de VLAN se propagarán automáticamente a los switches, reduciendo la carga administrativa y evitando inconsistencias en la segmentación.
 
 
 ## Paso 2: Capa Fisica:
-
-
 ### Cálculo de la Tasa de Transmisión 
 Se utiliza la fórmula de Shannon:
 
@@ -105,39 +105,8 @@ SNR: relación señal a ruido determinada  La relación señal a ruido se mide e
 
 Trenzado:  
 
-Coaxial:  
 
 Fibra:  
-
-
-**Perdidas**
-Calculo de perdidas de madrid a malaga(Temporal)
-Cálculo de Pérdida de Señal en Fibra Óptica
-Usaremos la fórmula:
-
-Perdida Total (dB)=Perdida por km×Distancia (km)+Perdida por Conectores+Perdida por Empalmes  
-Parámetros típicos:  
-
-
-Fibra Monomodo (SMF-28, 1550 nm):
-Atenuación promedio: 0.2 dB/km  
-Conectores (FC, SC, LC, etc.):
-Cada conector: 0.2 dB  
-Empalmes de fusión:
-Cada empalme: 0.1 dB  
-Se suele hacer 1 empalme cada 30 km → aprox. 18 empalmes en 530 km
-Cálculo Pérdida por fibra:  
-0.2dB/km×530km=106dB
-0.2 dB/km×530 km=106 dB  
-Pérdida por empalmes:
-
-18×0.1=1.8dB  
-Pérdida por conectores (suponiendo 2 extremos):
-2×0.2=0.4dB  
-
-Pérdida Total Estimada:
-106+1.8+0.4=108.2dB
-
 
 Selección de Modulación
 
