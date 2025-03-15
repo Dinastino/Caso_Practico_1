@@ -100,19 +100,28 @@ Donde: C=B*log2(1+SNR)
 
 Ancho de banda (B)
 
-SNR: relación señal a ruido determinada  La relación señal a ruido se mide en dB en un ancho de banda es:
+SNR: relación señal a ruido determinada.  
+La relación señal a ruido se mide en dB en un ancho de banda es:
 𝑆𝑁𝑅 = 10 𝑙𝑜𝑔10(𝑆𝑁𝑅) = 10𝑆𝑁𝑅/10 [dB]
+
+Ruido de mas o menos 30db para una asegurar conexión estable con alto trafico de datos y videoconferencias.  
+SNR lineal= 10^(30/10) = 10^3 = 1000
 
 Trenzado:  
 
+C = 2,5×10^8*log2(1+1000) = 2,5x10^8*log2(1001) = 2,5x10^8*9.967 = 2.49x10^9bps = 2.49 Gbps
 
-Fibra:  
+Entre switches:
 
-Selección de Modulación
+C = 1x10^9*log2(1001) =  1x10^9*9.967 = 9,967x10^9 bps = 9.97 Gbps
 
-La modulación es un factor clave para la eficiencia de la transmisión, ya que afecta la tasa de bits y la robustez ante interferencias. Se han seleccionado elsiguientes esquemas:
+Fibra optica:
 
-Enlaces cableados (Fibra óptica y Ethernet): Se emplea 16-QAM (16-Quadrature Amplitude Modulation). Este esquema de modulación proporciona un buen balance entre eficiencia espectral y resistencia al ruido, permitiendo transmitir 4 bits por símbolo. Se elige 16-QAM en lugar de modulación de orden superior (como 64-QAM o 256-QAM) debido a que los enlaces cableados tienen menor susceptibilidad al ruido y permiten una mayor fiabilidad sin necesidad de corrección de errores excesiva.
+C = 1x10^11*log(1001) = 1x10^11*9.967 = 9.97x10^11 bps = 997 Gbps
+
+### Selección de Modulación
+
+Se emplea el esquema de modulación 16-QAM (16-Quadrature Amplitude Modulation). Esta técnica ofrece un equilibrio óptimo entre eficiencia espectral y resistencia al ruido, permitiendo la transmisión de 4 bits por símbolo. Se ha seleccionado 16-QAM en lugar de modulaciones de orden superior, como 64-QAM o 256-QAM, debido a que los enlaces cableados presentan menor susceptibilidad al ruido. Esto garantiza una transmisión más fiable sin necesidad de aplicar esquemas complejos de corrección de errores.
 
 ## Capa de Red
 
