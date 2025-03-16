@@ -9,25 +9,25 @@ https://github.com/Dinastino/Caso_Practico_1.git
 
 El modelo OSI consta de siete capas que definen el proceso de comunicación de datos:
 
-1. **Capa Física**: Es la encargada de la transmisión de bits a traves de medios fisicos como cables de trenzado o fibra optica. También define estandares de conectores, interfaces mecanicas, electricas y opticas como tensiones logicas, tipempos de hold y set-up o metodos de transmisión. *Ejemplos*: Cables de red, conectores, tarjetas de red.
+1. **Capa Física**: Es la encargada de la transmisión de bits a traves de medios fisicos como cables de trenzado o fibra óptica. También define estándares de conectores, interfaces mecánicas, eléctricas y ópticas como tensiones lógicas, tiempos de hold y set-up o metodos de transmisión. *Ejemplos*: Cables de red, conectores, tarjetas de red.
 
    
-2. **Capa de Enlace de Datos**: Es la capa encargada de convertir el medio de transmisión puro en una línea de comunicación sin errores, detectandolos y corrigendolos asegurandose de una transmision confiable, y organizar los datos en tramas. Se divide en la subcapa de control de acceso al medio compartido y la subcapa de control del flujo. *Ejemplos*: Switches, adaptadores de red, Ethernet.
+2. **Capa de Enlace de Datos**: Es la capa encargada de convertir el medio de transmisión puro en una línea de comunicación sin errores, detectándolos y corrigiéndolos asegurándose de una transmisión confiable, y organizar los datos en tramas. Se divide en la subcapa de control de acceso al medio compartido y la subcapa de control del flujo. *Ejemplos*: Switches, adaptadores de red, Ethernet.
 
    
-3. **Capa de Red**: Se encarga del rutado desde origen a destino permition la comunicaion entre distintas redes. Se divide en rutado estatico, tablas fijas ya codificadas, o rutado dinamico, ajustes a tiempo real. Tambien gestiona la congestion de las redes, asegura la calidad del servicio y resuelve la interconexión entre diferentes redes. *Ejemplos*: Routers, direcciones IP.
+3. **Capa de Red**: Se encarga del rutado desde origen a destino permitiendo la comunicación entre distintas redes. Se divide en rutado estático, tablas fijas ya codificadas, o rutado dinámico, ajustes a tiempo real. Tambien gestiona la congestión de las redes, asegura la calidad del servicio y resuelve la interconexión entre diferentes redes. *Ejemplos*: Routers, direcciones IP.
 
    
 4. **Capa de Transporte**: Abstrae a las capas superiores de los cambios tecnológicos en las capas inferiores, dividiendo los datos para adaptarlos a la red. Garantiza una comunicación punto a punto libre de errores, asegurando que los mensajes lleguen completos y en orden, aunque en algunos casos pueden ser mensajes aislados sin garantía de secuencia. Los datos se manejan como segmentos o datagramas, dependiendo del protocolo utilizado. Opera desde el nodo inicial hasta el nodo final. *Ejemplos*: protocolos TCP, UDP.
 
    
-5. **Capa de Sesión**: Permite que diferentes maquinas establezcan y mantengan sesiones de comunicaión. Utiliza multiples servicios la aadministracion de token, control de secciones criticas, y la sincronización, manejando las interrupciones.
+5. **Capa de Sesión**: Permite que diferentes maquinas establezcan y mantengan sesiones de comunicaión. Utiliza multiples servicios como la administración de tokens, control de secciones criticas, y la sincronización, manejando las interrupciones.
 
     
-6. **Capa de Presentación**: Se ocupa de la sintaxis y semántica de la informacion transmitida permitienddo la comunicación entre nodos con diferentes formatos de datos.Se basa en estructuras de datros abstractas para estanddarizar la interpretación de la información.
+6. **Capa de Presentación**: Se ocupa de la sintaxis y semántica de la información transmitida permitienddo la comunicación entre nodos con diferentes formatos de datos.Se basa en estructuras de datos abstractas para estanddarizar la interpretación de la información.
 
     
-7. **Capa de Aplicación**: Capa que iteractua con el usuario final y proporcoina servicios como trasferencia de archivos, correo electronico y navegación web. Contiene los protocolos mas utilizados como HTTP, FTP o SMPT entre otros.
+7. **Capa de Aplicación**: Capa que iteractua con el usuario final y proporcoina servicios como trasferencia de archivos, correo electrónico y navegación web. Contiene los protocolos mas utilizados como HTTP, FTP o SMPT entre otros.
 
 El modelo TCP/IP se basa en cuatro capas:
 
@@ -70,10 +70,10 @@ Se utilizarán múltiples dispositivos para la implementación de la infraestruc
 2. Switches de acceso: Cisco 2960-24TT (8 unidades).
 3. Switch de multilayer: Cisco 3650-24PS.
 
-***Seguridad***: La seguridad de la red se garantizará mediante la instalación de dos firewalls. Ambos firewalls aislaran las redes internas y externas con una zona desmilitarizada en medio para mayor seguridad.
+***Seguridad***: La seguridad de la red se garantizará mediante la instalación de dos firewalls. Ambos firewalls aislarán las redes internas y externas con una zona desmilitarizada en medio para mayor seguridad.
 1. Firewall: Cisco ASA 5505 (2 unidades).
 
-***Servidores***: Los servidores web se ubicarán dentro de la DMZ, permitiendo acceso controlado desde el exterior, mientras que los servidores internos estarán situados en la red interna, asegurando un entorno aislado y más seguro para los datos sensibles.
+***Servidores***: Los servidores web se ubicarán dentro de la DMZ(zona desmilitarizada), permitiendo acceso controlado desde el exterior, mientras que los servidores internos estarán situados en la red interna, asegurando un entorno aislado y más seguro para los datos sensibles.
 1. Servidor: Server PT (7 unidades).
 
 ***Dispositivos***: Los ordenadores dentro de cada VLAN junto con los dispositivos de videoconferencia como los MCU, camaras y microfonos.
