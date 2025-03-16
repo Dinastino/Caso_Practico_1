@@ -219,5 +219,22 @@ MSS (Maximum Segment Size) = 1460 bytes (tamaño máximo de segmento TCP)
 Tamaño de Ventana = (10 × 10^6 × 0.05) / 1460 ≈ 342
 
 El valor calculado ayuda a optimizar el control de congestión asegurando que la transmisión no supere la capacidad del enlace.
-## Capa de aplicación y multimedia
-## Seguridad
+## Paso 5: Capa de Aplicación y Multimedia – Servicios y Calidad
+### Selección de Protocolos de Aplicación
+Los protocolos seleccionados para la comunicación multimedia incluyen:
+
+- SIP (Session Initiation Protocol): Para la gestión de sesiones de videoconferencia y control de señalización, permitiendo el establecimiento y terminación de llamadas en tiempo real.
+
+- WebRTC: Para permitir videoconferencias en tiempo real desde navegadores sin necesidad de plugins adicionales, facilitando la interoperabilidad entre diferentes plataformas.
+
+- DNS (Domain Name System): Para la resolución de nombres y localización de servidores de comunicación en la red, asegurando una conectividad rápida y eficiente.
+
+### Control de Calidad
+
+Para garantizar un servicio óptimo, se implementarán los siguientes mecanismos:
+
+- QoS (Quality of Service): Priorización del tráfico de videoconferencia mediante DiffServ y reserva de ancho de banda con RSVP, asegurando una experiencia fluida sin interrupciones.
+
+- Adaptive Streaming: Ajuste de la calidad del video en función de la disponibilidad de ancho de banda, utilizando técnicas como el escalado de bitrate en WebRTC. Esto permite que la transmisión se adapte dinámicamente a las condiciones de la red, evitando interrupciones y optimizando la calidad del servicio.
+
+## Paso 6: Seguridad
