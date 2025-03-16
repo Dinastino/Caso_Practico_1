@@ -123,9 +123,22 @@ $C = 1 * 10^{11} * log(1001) = 1x10^{11} * 9.967 = 9.97 * 10^{11} bps = 997 Gbps
 
 Se emplea el esquema de modulación 16-QAM (16-Quadrature Amplitude Modulation). Esta técnica ofrece un equilibrio óptimo entre eficiencia espectral y resistencia al ruido, permitiendo la transmisión de 4 bits por símbolo. Se ha seleccionado 16-QAM en lugar de modulaciones de orden superior, como 64-QAM o 256-QAM, debido a que los enlaces cableados presentan menor susceptibilidad al ruido. Esto garantiza una transmisión más fiable sin necesidad de aplicar esquemas complejos de corrección de errores.
 
-## Capa de Red
+## Paso 3: Capa de Red
 ### Esquema de direccionamiento de IP y subneteo
+
 Red interna de la sede: 198.168.0.0
+- **Dirección de Red:** 198.168.0.0
+- **Rango de Hosts:** 198.168.0.1 - 198.168.0.254
+- **Dirección de Broadcast:** 198.168.0.255
+
+| **VLAN** | **Subred**     | **Gateway**        | **Broadcast**      | **Rango de Hosts**        |
+|----------|----------------|--------------------|--------------------|---------------------------|
+| **100**  | 198.168.1.0/24 | 198.168.1.1        | 198.168.1.255      | 198.168.1.2 - 198.168.1.254 |
+| **200**  | 198.168.2.0/24 | 198.168.2.1        | 198.168.2.255      | 198.168.2.2 - 198.168.2.254 |
+| **300**  | 198.168.3.0/24 | 198.168.3.1        | 198.168.3.255      | 198.168.3.2 - 198.168.3.254 |
+| **400**  | 198.168.4.0/24 | 198.168.4.1        | 198.168.4.255      | 198.168.4.2 - 198.168.4.254 |
+| **500**  | 198.168.5.0/24 | 198.168.5.1        | 198.168.5.255      | 198.168.5.2 - 198.168.5.254 |
+| **600**  | 198.168.6.0/24 | 198.168.6.1        | 198.168.6.255      | 198.168.6.2 - 198.168.6.254 |
 
 
 ***Ejemplo***  
@@ -147,15 +160,16 @@ Cálculo para todas las oficinas y VLANs
 | 200  | Sala 2                      | /27               | 10.0.1.32        | 10.0.1.63       | 10.0.1.33 - 10.0.1.62 |
 | 300  | Sala 3                      | /27               | 10.0.1.64        | 10.0.1.95       | 10.0.1.65 - 10.0.1.94 |
 | 400  | Sala 4                      | /27               | 10.0.1.96        | 10.0.1.127      | 10.0.1.97 - 10.0.1.126 |
-| 500  | IoT (Cámaras, MCU)          | /28 (255.255.255.240) | 10.0.1.128       | 10.0.1.143      | 10.0.1.129 - 10.0.1.142 |
-| 510  | Teléfonos IP                | /26 (255.255.255.192) | 10.0.1.144       | 10.0.1.191      | 10.0.1.145 - 10.0.1.190 |
-| 520  | WiFi                        | /25 (255.255.255.128) | 10.0.1.192       | 10.0.1.255      | 10.0.1.193 - 10.0.1.254 |
-| 600  | Servidores                  | /28               | 10.0.2.0         | 10.0.2.15       | 10.0.2.1 - 10.0.2.14  |
+
 
 
 
 
 ### Enrutamiento
+***Dijkstra***
+
+
+***Enrutamiento por inundación***
 
 
 El enrutamiento por inundación es un método donde los paquetes se envían a todas las rutas disponibles en caso de falla, garantizando que lleguen a su destino. Se usa en situaciones de contingencia cuando la red principal se cae.
