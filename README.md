@@ -105,19 +105,19 @@ La relación señal a ruido se mide en dB en un ancho de banda es:
 𝑆𝑁𝑅 = 10 𝑙𝑜𝑔_10(𝑆𝑁𝑅) = 10𝑆𝑁𝑅/10 [dB]
 
 Ruido de mas o menos 30db para una asegurar conexión estable con alto trafico de datos y videoconferencias.  
-SNR lineal= $10^(30/10) = 10^3 = 1000$
+SNR lineal= $10^{30/10} = 10^3 = 1000$
 
 Trenzado:  
 
-$C = 2,5*10^8*log_2(1+1000) = 2,5*10^8*log_2(1001) = 2,5*10^8*9.967 = 2.49*10^9bps = 2.49 Gbps$
+$C = 2,5 * 10^8 * log_2(1+1000) = 2,5 * 10^8 * log_2(1001) = 2,5 * 10^8 * 9.967 = 2.49 * 10^9bps = 2.49 Gbps$
 
 Entre switches:
 
-$C = 1*10^9*log_2(1001) =  110^9*9.967 = 9,96710^9 bps = 9.97 Gbps$
+$C = 1* 10^9 * log_2(1001) =  1 * 10^9 * 9.967 = 9,96710^9 bps = 9.97 Gbps$
 
 Fibra optica:
 
-$C = 1*10^11*log(1001) = 1x10^11*9.967 = 9.97x10^11 bps = 997 Gbps$
+$C = 1 * 10^11 * log(1001) = 1x10^11 * 9.967 = 9.97 * 10^11 bps = 997 Gbps$
 
 ### Selección de Modulación
 
