@@ -1,6 +1,6 @@
 https://github.com/Dinastino/Caso_Practico_1.git
 # Caso_Practico_1
-
+Álvaro López, Carlos Oramas, Mario Gonzalo, Leonardo Valdes.
 # Diseño de la Arquitectura de Comunicación
 
 ## Paso 1: Análisis y Diseño de la Arquitectura de Comunicación
