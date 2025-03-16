@@ -205,5 +205,19 @@ A nivel de software: Programar protocolos que activen el enrutamiento por inunda
 - Se usa UDP para videoconferencias porque permite una menor latencia, lo que es esencial en aplicaciones de tiempo real, como el video y el audio en vivo. UDP no garantiza la entrega de paquetes ni el orden de los mismos, lo que significa que si algunos paquetes se pierden, la comunicación sigue sin detenerse, lo cual es tolerable en videoconferencias, donde la fluidez es más importante que la perfección.
 
 - Por otro lado, TCP se utiliza para datos críticos porque asegura que los paquetes se entreguen de manera fiable y en el orden correcto. Si un paquete se pierde, TCP lo retransmitirá automáticamente, lo cual es necesario para datos importantes, como transacciones bancarias o la transferencia de archivos, donde la integridad y la precisión de la información son esenciales.
+### Calculo del tamaño de ventana
+Para determinar el tamaño de ventana óptimo en los enlaces de videoconferencia, utilizamos la siguiente fórmula basada en la ventana de congestión:
+
+Tamaño de Ventana = (Ancho de Banda × RTT) / MSS
+
+Donde:
+
+Ancho de Banda = 10 Mbps (Ejemplo de enlace disponible para videoconferencia)  
+RTT (Round Trip Time) = 50 ms (0.05 s)  
+MSS (Maximum Segment Size) = 1460 bytes (tamaño máximo de segmento TCP)
+
+Tamaño de Ventana = (10 × 10^6 × 0.05) / 1460 ≈ 342
+
+El valor calculado ayuda a optimizar el control de congestión asegurando que la transmisión no supere la capacidad del enlace.
 ## Capa de aplicación y multimedia
 ## Seguridad
