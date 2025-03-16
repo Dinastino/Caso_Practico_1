@@ -68,7 +68,7 @@ Se utilizarán múltiples dispositivos para la implementación de la infraestruc
 ***Enrutamiento***: Para el enrutamiento, se implementará un router central que gestionará el tráfico entre las distintas redes. Adicionalmente, se instalará un switch en cada par de plantas, comenzando con la recepción y la planta 1, y se continuará de la misma forma para las demás plantas del edificio.
 1. Router principal: Cisco ISR4331.
 2. Switches de acceso: Cisco 2960-24TT (8 unidades).
-3. Switch de multylayer: Cisco 3650-24PS.
+3. Switch de multilayer: Cisco 3650-24PS.
 
 ***Seguridad***: La seguridad de la red se garantizará mediante la instalación de dos firewalls. Ambos firewalls aislaran las redes internas y externas con una zona desmilitarizada en medio para mayor seguridad.
 1. Firewall: Cisco ASA 5505 (2 unidades).
@@ -86,7 +86,7 @@ La red se segmentará en varias VLANs, siguiendo un esquema de distribución por
 3. Las plantas 4 y 5 estarán en la VLAN 300.  
 4. Las plantas 6 y 7 serán asignadas a la VLAN 400.  
 5. Las plantas 8 y 9 estarán en la VLAN 500.  
-6. Finalmente, las plantas 10 y 11 corresponderán a la VLAN 600.  
+6. Finalmente, a la planta 10 le corresponderá a la VLAN 600.  
 
 
 Para optimizar la administración de las VLANs, se implementará el protocolo VTP (VLAN Trunking Protocol), permitiendo una gestión centralizada y eficiente de las VLANs a lo largo de toda la red. Mediante VTP, los cambios en la configuración de VLAN se propagarán automáticamente a los switches, reduciendo la carga administrativa y evitando inconsistencias en la segmentación.
@@ -96,13 +96,13 @@ Para optimizar la administración de las VLANs, se implementará el protocolo VT
 ### Cálculo de la Tasa de Transmisión 
 Se utiliza la fórmula de Shannon:
 
-Donde: C=B*log2(1+SNR)
+Donde: $C = B * log_2(1+SNR)$
 
 Ancho de banda (B)
 
 SNR: relación señal a ruido determinada.  
 La relación señal a ruido se mide en dB en un ancho de banda es:
-𝑆𝑁𝑅 = 10 𝑙𝑜𝑔10(𝑆𝑁𝑅) = 10𝑆𝑁𝑅/10 [dB]
+𝑆𝑁𝑅 = 10 𝑙𝑜𝑔_10(𝑆𝑁𝑅) = 10𝑆𝑁𝑅/10 [dB]
 
 Ruido de mas o menos 30db para una asegurar conexión estable con alto trafico de datos y videoconferencias.  
 SNR lineal= 10^(30/10) = 10^3 = 1000
