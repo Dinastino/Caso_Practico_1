@@ -127,5 +127,5 @@ Se emplea el esquema de modulación 16-QAM (16-Quadrature Amplitude Modulation).
 
 
 ## Capa de trasporte
-## Capa de aplicaion Multimedia
+## Capa de aplicación y multimedia
 ## Seguridad
