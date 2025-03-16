@@ -239,3 +239,11 @@ Para garantizar un servicio óptimo, se implementarán los siguientes mecanismos
 - Adaptive Streaming: Ajuste de la calidad del video en función de la disponibilidad de ancho de banda, utilizando técnicas como el escalado de bitrate en WebRTC. Esto permite que la transmisión se adapte dinámicamente a las condiciones de la red, evitando interrupciones y optimizando la calidad del servicio.
 
 ## Paso 6: Seguridad
+Se aplicarán medidas estrictas para proteger la red y los datos, garantizando la seguridad de las comunicaciones:  
+
+
+- **VPN** (Virtual Private Network): Se establecerán túneles seguros para la comunicación entre sedes remotas, proporcionando cifrado y protección contra interceptaciones.
+
+- **Firewalls y DMZ** Se tendra una red interna establecida con VLANS con una zona desmilitarizada con doble capa de firewall entre red interna y externa. Aparte los servidores criticos se encontraran cubiertos tras la doble capa de firewall mencionada
+
+Como nota adicional al ser conexion por trama fisica se crea un entorno mas seguro que inalambrico dado que es mas dificil de interceptar y se necesitaria un acceso directo para poder acceder a la red.
