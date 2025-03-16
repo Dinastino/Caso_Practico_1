@@ -124,6 +124,61 @@ $C = 1 * 10^{11} * log(1001) = 1x10^{11} * 9.967 = 9.97 * 10^{11} bps = 997 Gbps
 Se emplea el esquema de modulación 16-QAM (16-Quadrature Amplitude Modulation). Esta técnica ofrece un equilibrio óptimo entre eficiencia espectral y resistencia al ruido, permitiendo la transmisión de 4 bits por símbolo. Se ha seleccionado 16-QAM en lugar de modulaciones de orden superior, como 64-QAM o 256-QAM, debido a que los enlaces cableados presentan menor susceptibilidad al ruido. Esto garantiza una transmisión más fiable sin necesidad de aplicar esquemas complejos de corrección de errores.
 
 ## Capa de Red
+### Esquema de direccionamiento de IP y subneteo
+
+||||||||||||
+|-|-|-|-|-|-|-|-|-|-|-|
+
+
+
+***Ejemplo***  
+
+Oficina con 30 hosts (Sala 1 - VLAN 100)
+Si una oficina tiene hasta 30 dispositivos, necesitamos al menos 32 direcciones IP (30 hosts + 1 gateway + 1 reserva).
+Se necesita una máscara que permita 32 direcciones, lo que corresponde a /27 (255.255.255.224).
+
+Cálculo
+Dirección de Red: 10.0.1.0
+Máscara de Subred: 255.255.255.224
+Dirección de Broadcast: 10.0.1.31
+Rango de Hosts: 10.0.1.1 - 10.0.1.30
+Gateway: 10.0.1.1
+Cálculo para todas las oficinas y VLANs
+| VLAN | Área                        | Máscara           | Dirección de Red | Broadcast       | Rango de Hosts       |
+|------|-----------------------------|-------------------|------------------|-----------------|----------------------|
+| 100  | Sala 1                      | /27 (255.255.255.224) | 10.0.1.0         | 10.0.1.31       | 10.0.1.1 - 10.0.1.30 |
+| 200  | Sala 2                      | /27               | 10.0.1.32        | 10.0.1.63       | 10.0.1.33 - 10.0.1.62 |
+| 300  | Sala 3                      | /27               | 10.0.1.64        | 10.0.1.95       | 10.0.1.65 - 10.0.1.94 |
+| 400  | Sala 4                      | /27               | 10.0.1.96        | 10.0.1.127      | 10.0.1.97 - 10.0.1.126 |
+| 500  | IoT (Cámaras, MCU)          | /28 (255.255.255.240) | 10.0.1.128       | 10.0.1.143      | 10.0.1.129 - 10.0.1.142 |
+| 510  | Teléfonos IP                | /26 (255.255.255.192) | 10.0.1.144       | 10.0.1.191      | 10.0.1.145 - 10.0.1.190 |
+| 520  | WiFi                        | /25 (255.255.255.128) | 10.0.1.192       | 10.0.1.255      | 10.0.1.193 - 10.0.1.254 |
+| 600  | Servidores                  | /28               | 10.0.2.0         | 10.0.2.15       | 10.0.2.1 - 10.0.2.14  |
+
+
+
+
+### Enrutamiento
+
+
+El enrutamiento por inundación es un método donde los paquetes se envían a todas las rutas disponibles en caso de falla, garantizando que lleguen a su destino. Se usa en situaciones de contingencia cuando la red principal se cae.
+
+
+1. **Definir el Escenario de Contingencia**
+Identificar los puntos críticos en la red donde pueden ocurrir fallos.
+Determinar si el enrutamiento por inundación será permanente o temporal (activado solo en caso de falla).
+
+
+2. **Configurar la Propagación de Paquetes**
+Cada nodo que recibe un paquete lo reenvía a todos sus vecinos excepto al nodo del que lo recibió.
+Implementar una estrategia para evitar la duplicación excesiva de paquetes:
+TTL (Time-To-Live): Limitar la cantidad de veces que un paquete puede reenviarse.
+Secuenciamiento: Etiquetar los paquetes con identificadores únicos para evitar reenvíos innecesarios.
+
+
+4. **Implementar en la Red**
+A nivel de hardware: Configurar switches o routers con soporte para reenvío automático de paquetes.
+A nivel de software: Programar protocolos que activen el enrutamiento por inundación solo cuando se detecte un fallo en las rutas principales.
 
 
 ## Capa de trasporte
