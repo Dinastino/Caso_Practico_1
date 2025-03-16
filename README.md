@@ -102,10 +102,10 @@ Ancho de banda (B)
 
 SNR: relación señal a ruido determinada.  
 La relación señal a ruido se mide en dB en un ancho de banda es:
-𝑆𝑁𝑅 = 10 𝑙𝑜𝑔_10(𝑆𝑁𝑅) = 10𝑆𝑁𝑅/10 [dB]
+$𝑆𝑁𝑅 = 10 𝑙𝑜𝑔_10(𝑆𝑁𝑅) = 10^{\frac{SNR}{10}}$ [dB]
 
 Ruido de mas o menos 30db para una asegurar conexión estable con alto trafico de datos y videoconferencias.  
-SNR lineal= $10^{30/10} = 10^3 = 1000$
+SNR lineal= $10^{\frac{30}{10}} = 10^3 = 1000$
 
 Trenzado:  
 
