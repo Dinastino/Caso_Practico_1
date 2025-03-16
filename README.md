@@ -201,5 +201,9 @@ A nivel de software: Programar protocolos que activen el enrutamiento por inunda
 
 
 ## Capa de trasporte
+### Seleccion de protocolos
+- Se usa UDP para videoconferencias porque permite una menor latencia, lo que es esencial en aplicaciones de tiempo real, como el video y el audio en vivo. UDP no garantiza la entrega de paquetes ni el orden de los mismos, lo que significa que si algunos paquetes se pierden, la comunicación sigue sin detenerse, lo cual es tolerable en videoconferencias, donde la fluidez es más importante que la perfección.
+
+- Por otro lado, TCP se utiliza para datos críticos porque asegura que los paquetes se entreguen de manera fiable y en el orden correcto. Si un paquete se pierde, TCP lo retransmitirá automáticamente, lo cual es necesario para datos importantes, como transacciones bancarias o la transferencia de archivos, donde la integridad y la precisión de la información son esenciales.
 ## Capa de aplicación y multimedia
 ## Seguridad
