@@ -9,7 +9,7 @@ https://github.com/Dinastino/Caso_Practico_1.git
 
 El modelo OSI consta de siete capas que definen el proceso de comunicación de datos:
 
-1. **Capa Física**: Es la encargada de la transmisión de bits a traves de medios fisicos como cables de trenzado o fibra óptica. También define estándares de conectores, interfaces mecánicas, eléctricas y ópticas como tensiones lógicas, tiempos de hold y set-up o metodos de transmisión. *Ejemplos*: Cables de red, conectores, tarjetas de red.
+1. **Capa Física**: Es la encargada de la transmisión de bits a través de medios físicos como cables de trenzado o fibra óptica. También define estándares de conectores, interfaces mecánicas, eléctricas y ópticas como tensiones lógicas, tiempos de hold y set-up o métodos de transmisión. *Ejemplos*: Cables de red, conectores, tarjetas de red.
 
    
 2. **Capa de Enlace de Datos**: Es la capa encargada de convertir el medio de transmisión puro en una línea de comunicación sin errores, detectándolos y corrigiéndolos asegurándose de una transmisión confiable, y organizar los datos en tramas. Se divide en la subcapa de control de acceso al medio compartido y la subcapa de control del flujo. *Ejemplos*: Switches, adaptadores de red, Ethernet.
@@ -21,13 +21,13 @@ El modelo OSI consta de siete capas que definen el proceso de comunicación de d
 4. **Capa de Transporte**: Abstrae a las capas superiores de los cambios tecnológicos en las capas inferiores, dividiendo los datos para adaptarlos a la red. Garantiza una comunicación punto a punto libre de errores, asegurando que los mensajes lleguen completos y en orden, aunque en algunos casos pueden ser mensajes aislados sin garantía de secuencia. Los datos se manejan como segmentos o datagramas, dependiendo del protocolo utilizado. Opera desde el nodo inicial hasta el nodo final. *Ejemplos*: protocolos TCP, UDP.
 
    
-5. **Capa de Sesión**: Permite que diferentes maquinas establezcan y mantengan sesiones de comunicaión. Utiliza multiples servicios como la administración de tokens, control de secciones criticas, y la sincronización, manejando las interrupciones.
+5. **Capa de Sesión**: Permite que diferentes maquinas establezcan y mantengan sesiones de comunicación. Utiliza múltiples servicios como la administración de tokens, control de secciones criticas, y la sincronización, manejando las interrupciones.
 
     
-6. **Capa de Presentación**: Se ocupa de la sintaxis y semántica de la información transmitida permitienddo la comunicación entre nodos con diferentes formatos de datos.Se basa en estructuras de datos abstractas para estanddarizar la interpretación de la información.
+6. **Capa de Presentación**: Se ocupa de la sintaxis y semántica de la información transmitida permitiendo la comunicación entre nodos con diferentes formatos de datos.Se basa en estructuras de datos abstractas para estandarizar la interpretación de la información.
 
     
-7. **Capa de Aplicación**: Capa que iteractua con el usuario final y proporcoina servicios como trasferencia de archivos, correo electrónico y navegación web. Contiene los protocolos mas utilizados como HTTP, FTP o SMPT entre otros.
+7. **Capa de Aplicación**: Capa que interactua con el usuario final y proporciona servicios como trasferencia de archivos, correo electrónico y navegación web. Contiene los protocolos mas utilizados como HTTP, FTP o SMPT entre otros.
 
 El modelo TCP/IP se basa en cuatro capas:
 
@@ -59,7 +59,7 @@ Diagrama en el drawio
 #### Sedes:  
 1.Madrid  
 
-2.Malaga
+2.Málaga
 
 #### Dispositivos:
 
@@ -76,7 +76,7 @@ Se utilizarán múltiples dispositivos para la implementación de la infraestruc
 ***Servidores***: Los servidores web se ubicarán dentro de la DMZ(zona desmilitarizada), permitiendo acceso controlado desde el exterior, mientras que los servidores internos estarán situados en la red interna, asegurando un entorno aislado y más seguro para los datos sensibles.
 1. Servidor: Server PT (7 unidades).
 
-***Dispositivos***: Los ordenadores dentro de cada VLAN junto con los dispositivos de videoconferencia como los MCU, camaras y microfonos.
+***Dispositivos***: Los ordenadores dentro de cada VLAN junto con los dispositivos de videoconferencia como los MCU, cámaras y micrófonos.
 
 #### Segmentación de la Red:  
 La red se segmentará en varias VLANs, siguiendo un esquema de distribución por plantas. El diseño será el siguiente:
@@ -86,13 +86,13 @@ La red se segmentará en varias VLANs, siguiendo un esquema de distribución por
 3. Las plantas 4 y 5 estarán en la VLAN 300.  
 4. Las plantas 6 y 7 serán asignadas a la VLAN 400.  
 5. Las plantas 8 y 9 estarán en la VLAN 500.  
-6. Finalmente, a la planta 10 le corresponderá a la VLAN 600.  
+6. Finalmente, a la planta 10 le corresponderá la VLAN 600.  
 
 
 Para optimizar la administración de las VLANs, se implementará el protocolo VTP (VLAN Trunking Protocol), permitiendo una gestión centralizada y eficiente de las VLANs a lo largo de toda la red. Mediante VTP, los cambios en la configuración de VLAN se propagarán automáticamente a los switches, reduciendo la carga administrativa y evitando inconsistencias en la segmentación.
 
 
-## Paso 2: Capa Fisica:
+## Paso 2: Capa Física:
 ### Cálculo de la Tasa de Transmisión 
 Se utiliza la fórmula de Shannon:
 
@@ -115,7 +115,7 @@ Entre switches:
 
 $C = 1* 10^9 * log_2(1001) =  1 * 10^9 * 9.967 = 9,96710^9 bps = 9.97 Gbps$
 
-Fibra optica:
+Fibra óptica:
 
 $C = 1 * 10^{11} * log(1001) = 1x10^{11} * 9.967 = 9.97 * 10^{11} bps = 997 Gbps$
 
