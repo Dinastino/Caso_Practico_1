@@ -166,8 +166,21 @@ Cálculo para todas las oficinas y VLANs
 
 
 ### Enrutamiento
-***Dijkstra***
+***Dijkstra***  
 
+
+Para implementar el algoritmo de Dijkstra en un diagrama de rutas entre sedes, necesitamos representar un grafo donde las sedes sean los nodos y las rutas entre ellas sean los bordes con un peso asociado (esto podría representar, por ejemplo, la distancia o el tiempo de viaje).
+
+Pasos del algoritmo de Dijkstra:
+1. Inicialización: Se asigna un valor de "infinito" a todas las sedes, excepto a la sede de inicio, que tiene un valor de 0. Este valor representa la distancia más corta desde la sede de inicio a cada sede.
+
+2. Selección del nodo: El nodo con el valor más bajo (la distancia más corta) es seleccionado como el nodo actual. A este nodo se le asignan sus vecinos, actualizando las distancias si se encuentra un camino más corto.
+
+3. Actualización de distancias: Para cada vecino del nodo actual, calculamos si el camino pasando por el nodo actual es más corto que el camino conocido hasta ese momento. Si es más corto, actualizamos la distancia al vecino.
+
+4. Marcado como visitado: Una vez que todos los vecinos han sido explorados, marcamos el nodo actual como visitado y pasamos al siguiente nodo con la distancia más baja no visitada.
+
+5. Repetir: Este proceso se repite hasta que todos los nodos hayan sido visitados.
 
 ***Enrutamiento por inundación***
 
