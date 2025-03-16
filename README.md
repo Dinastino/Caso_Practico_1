@@ -126,11 +126,14 @@ Se emplea el esquema de modulación 16-QAM (16-Quadrature Amplitude Modulation).
 ## Paso 3: Capa de Red
 ### Esquema de direccionamiento de IP y subneteo
 
-Red interna de la sede: 198.168.0.0
-- **Dirección de Red:** 198.168.0.0
-- **Rango de Hosts:** 198.168.0.1 - 198.168.0.254
-- **Dirección de Broadcast:** 198.168.0.255
+Red  de la sede: 192.168.1.0
+- **Dirección de Red:** 192.168.1.0
+- **Rango de Hosts:** 192.168.1.1 - 192.168.0.254
+- **Dirección de Broadcast:** 198.162.1.255
 
+Las direcciones IP para cada VLAN estarán dentro del rango de 192.168.1.1 a 192.168.1.254, sin dividir el espacio de direcciones.  
+Las VLANs se gestionan a través de switches de capa 2 que etiquetan el tráfico de red para asegurarse de que los paquetes se dirijan correctamente hacia cada VLAN.  
+Aunque las VLANs están en la misma red 192.168.1.0/24, los dispositivos en diferentes VLANs no pueden comunicarse directamente a menos que haya un router o un switch de capa 3 que realice el ruteo inter-VLAN (esto se realiza en el router, el cual puede tener interfaces virtuales o subinterfaces para cada VLAN).
 
 
 ***Ejemplo***  
