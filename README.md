@@ -125,10 +125,7 @@ Se emplea el esquema de modulación 16-QAM (16-Quadrature Amplitude Modulation).
 
 ## Capa de Red
 ### Esquema de direccionamiento de IP y subneteo
-
-||||||||||||
-|-|-|-|-|-|-|-|-|-|-|-|
-
+Red interna de la sede: 198.168.0.0
 
 
 ***Ejemplo***  
