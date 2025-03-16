@@ -244,6 +244,6 @@ Se aplicarán medidas estrictas para proteger la red y los datos, garantizando l
 
 - **VPN** (Virtual Private Network): Se establecerán túneles seguros para la comunicación entre sedes remotas, proporcionando cifrado y protección contra interceptaciones.
 
-- **Firewalls y DMZ** Se tendra una red interna establecida con VLANS con una zona desmilitarizada con doble capa de firewall entre red interna y externa asegurando un acceso seguro y controlado a la red. Aparte los servidores criticos se encontraran cubiertos tras la doble capa de firewall mencionada y los web dentro de la zon desmilitarizada.
+- **Firewalls y DMZ** Se tendrá una red interna establecida con VLANS con una zona desmilitarizada con doble capa de firewall entre red interna y externa asegurando un acceso seguro y controlado a la red. Aparte los servidores críticos se encontrarán cubiertos tras la doble capa de firewall mencionada y los web dentro de la zona desmilitarizada.
 
-Como nota adicional al ser conexion por trama fisica se crea un entorno mas seguro que inalambrico dado que es mas dificil de interceptar y se necesitaria un acceso directo para poder acceder a la red.
+Como nota adicional al ser conexión por trama física se crea un entorno más seguro que inalambrico dado que es más difícil de interceptar y se necesitaría un acceso directo para poder acceder a la red.
